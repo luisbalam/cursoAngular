@@ -6,6 +6,9 @@ import { HomeComponent } from '../home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
+import { MaterialModule } from 'src/app/material.module';
+
+
 
 
 @NgModule({
@@ -17,7 +20,11 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MaterialModule
+  ],
+  exports:[
+    HomeComponent
   ]
 })
 export class HomeModule { }

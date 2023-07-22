@@ -4,6 +4,12 @@ export interface IModel {
     update_on: string;
 }
 
+export interface Response {
+    Items: INote[];
+    count: number;
+    scannedCount: number;
+}
+
 export interface INote extends IModel {
     description: string;
     status: boolean;
@@ -12,7 +18,10 @@ export interface INote extends IModel {
 export interface IUser extends IModel {
     name: string;
     username: string;
-    notes: INote[];
+    birthday: Date;
+    email?: string;
+    city: string;
+    note?: INote[];
 }
 
 export enum Dias{"LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "DOMINGO"}

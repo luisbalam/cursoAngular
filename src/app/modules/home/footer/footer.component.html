@@ -1,1 +1,5 @@
-<p>footer works!</p>
+<mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Color selection">
+    <mat-chip-option *ngFor="let chip of availableColors" selected [color]="chip.color">
+      {{chip.name}}
+    </mat-chip-option>
+  </mat-chip-listbox>
